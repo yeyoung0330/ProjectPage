@@ -181,10 +181,20 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Method</h2>
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/carousel1.jpg" alt="그림 1"/>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            1. 데이터 전처리와 라벨링
+          </p>
+             데이터 전처리는 주어진 건강검진 데이터를 분석에 적절한 형태로 가공하는 과정이다.[2] 결측치가 있는 행을 dropna를 통해 제거한다. 고혈압 상태 레이블 생성을 위해 sbp이 140이상이고 dbp가 90 이상인 상태를 고혈압 상태로 라벨링한다. 수치형 데이터인 키, 체중, 식전혈당 feature는 평균값으로 결측치를 대체하고 스케일링을 수행하여 데이터를 정규화한다.
+          </p>
+            2. 예측모델 (머신러닝)
+          </p>
+             예측모델로는 randomforest classifier를 사용한다. randomforest는 여러 개의 의사결정 트리를 결합하여 안정적인 예측 성능을 제공하는 앙상블 학습 기법이다.[3] randomforest classifier를 통해 고혈압 예측 모델을 훈련하고, 테스트 데이터를 사용하여 평가한다. 모델 평가 결과 Accuracy : 0.90, Precision: 0.97, Recall : 0.83, F1score : 0.89로 적절한 성능을 가진다.
+          </p>
+            3. 결과 시각화
+          </p>
+             건강검진 데이터를 활용한 고혈압 예측을 수행하는 과정에서 feature에 대한 중요도를 시각화한다. [ 그림1 ]을 통해 키, 몸무게, 혈당에 대한 중요도를 알 수 있다. 그 결과 세 feature의 중요도는 거의 키, 몸무게, 혈당 순서로 중요함을 알 수 있다.
           </p>
         </div>
       </div>
@@ -234,7 +244,7 @@
         <h2 class="title is-3">Experimental Results</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            이 보고서는 건강검진 데이터를 활용하여 고혈압 예측을 수행하는 과정과 결과를 소개한다. 이를 통해 의료 분야에 인공지능 기술의 적용이 중요하고, 그 성능에 대한 평가도 이뤄질 수 있다는 지표를 제시한다. 나아가 고혈압 외에 다른 의료 분야에 인공지능이 결합하여 사람들의 healthcare를 할 수 있는 전망있는 분야임을 설명한다. 이러한 연구가 발전되면 의료 서비스의 개선과 질병 예방에 기여할 수 있는 중요한 연구 분야임을 보여준다.
           </p>
         </div>
         
@@ -276,6 +286,26 @@
 </section>
 <!-- End Experiments -->
 
+<!-- Paper reference -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Reference</h2>
+        <div class="content has-text-justified">
+          <p>
+            [1] 질병관리청 국가건강정보포털, 건강정보, 고혈압심장질환 
+          </p>
+            [2] 서진범, 장호혁, and 조영복. "효율적 딥 러닝을 위한 이미지 전처리 알고리즘 분석." 한국정보통신학회 종합학술대회 논문집 24.1 (2020): 161-164.
+          </p>
+            [3] 김경태, and 이지형. "딥 러닝과 Boosted Decision Tree 를 활용한 고객 이탈 예측 모델." 한국지능시스템학회 논문지 28.1 (2018): 7-12.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
 
 
 
